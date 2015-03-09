@@ -14,5 +14,43 @@
 			<li><a href="https://www.npmjs.com/~jonathanprince" class="img-link npm" target="_blank" title="Node packages on NPM">NPM</a></li>
 		</ul>
 	</header>
+
+	<section class="github">
+		<h2>GitHub Repositories</h2>
+		<div id="repo-list">
+			<img src="img/spinner.gif" class="spinner">
+		</div>
+	</section>
+
+	<script id="repo-template" type="text/x-handlebars-template">
+		
+		{{#each repos}}
+			<article class="repo">
+
+			{{#if fork}}
+				<img src="img/fork.png">
+			{{else}}
+				<img src="img/repo.png">
+			{{/if}}
+
+				<h3><a href="{{html_url}}" target="_blank">{{name}}</a></h3>
+				<p>{{description}}</p>
+			</article>
+		{{/each}}
+
+	</script>
+	
+	<script src="/js/vendor/jquery.min.js"></script>
+	<script src="/js/vendor/handlebars.min.js"></script>
+	
+	<script>
+		
+		$.get('https://api.github.com/users/JonathanPrince/repos?sort=updated', function(res){
+			var source = document.getElementById('repo-template').innerHTML;
+			var template = Handlebars.compile(source);
+			document.getElementById('repo-list').innerHTML = template({repos: res});
+		});
+		
+	</script>
 </body>
 </html>

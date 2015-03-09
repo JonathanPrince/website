@@ -68,6 +68,7 @@ article.repo {
 	height: 100px;
 	overflow: hidden;
 	border-bottom: 1px #ccc solid;
+	position: relative;
 }
 article.repo img {
 	float: left;
@@ -78,7 +79,36 @@ article.repo h3 {
 article.repo h3 a {
 	color: #f16745;
 }
-
+article.repo span.lang {
+	position:absolute;
+	top:0;
+	right:0;
+	display: block;
+	width:20px;
+	height:20px;
+	background: url('/img/lang-sprites.png') no-repeat;
+}
+article.repo span.lang.JavaScript {
+	background-position: -20px 0;
+}
+article.repo span.lang.Swift {
+	background-position: -40px 0;
+}
+article.repo span.lang.PHP {
+	background-position: -60px 0;
+}
+article.repo span.lang.Ruby {
+	background-position: -80px 0;
+}
+article.repo span.lang.CSS {
+	background-position: -100px 0;
+}
+article.repo span.lang.Arduino {
+	background-position: -120px 0;
+}
+article.repo span.lang.Python {
+	background-position: -140px 0;
+}
 /* for retina/high res displays */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),

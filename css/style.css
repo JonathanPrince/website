@@ -1,0 +1,52 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Trebuchet MS",Helvetica,sans-serif;
+}
+header {
+	background-color: #000;
+	background-image: url('/img/mario.jpg');
+	background-position: right top;
+	background-repeat: no-repeat;
+	height: 170px;
+	border-bottom: 3px #7bc8a4 solid;
+	color: #eee;
+	text-align: center;
+	overflow: auto;
+}
+header h1 {
+	font-weight: normal;
+	margin: 0.4em 0;
+}
+header h3 {
+	font-family: courier;
+	font-weight: normal;
+	text-transform: lowercase;
+}
+header ul.header-links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+header ul.header-links li {
+	display: inline-block;
+	margin: 0 5px;
+}
+header ul.header-links li a {
+	display: block;
+	width: 46px;
+	height:46px;
+	background-image: url('/img/sprite.png');
+	background-repeat: no-repeat;
+	text-indent: 100%;
+	overflow: hidden;
+}
+header ul.header-links li a.twitter {
+	background-position-x: -46px; 
+}
+header ul.header-links li a.npm {
+	background-position-x: -92px; 
+}
+header ul.header-links li a:hover {
+	background-position-y: -46px; 
+}

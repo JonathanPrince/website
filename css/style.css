@@ -50,3 +50,22 @@ header ul.header-links li a.npm {
 header ul.header-links li a:hover {
 	background-position-y: -46px; 
 }
+
+/* for retina/high res displays */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+
+	header {
+		background-image: url('/img/mario@2x.jpg');
+		background-size: 170px 170px;
+	}
+	header ul.header-links li a {
+		background-image: url('/img/sprite@2x.png');
+		background-size: 138px 92px;
+	}
+}

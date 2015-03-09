@@ -8,7 +8,7 @@ header {
 	background-image: url('/img/mario.jpg');
 	background-position: right top;
 	background-repeat: no-repeat;
-	height: 170px;
+	height: 180px;
 	border-bottom: 3px #7bc8a4 solid;
 	color: #eee;
 	text-align: center;
@@ -16,7 +16,7 @@ header {
 }
 header h1 {
 	font-weight: normal;
-	margin: 0.4em 0;
+	margin: 0.5em 0 0.4em 0;
 }
 header h3 {
 	font-family: courier;
@@ -25,7 +25,7 @@ header h3 {
 }
 header ul.header-links {
 	list-style: none;
-	margin: 0;
+	margin: 25px 0 0 0;
 	padding: 0;
 }
 header ul.header-links li {
